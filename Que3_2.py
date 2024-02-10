@@ -33,8 +33,11 @@ def find_files_with_phrase(positional_index, phrase_query):
                     files_containing_phrase.add(file_name)
     return files_containing_phrase
 
-# Sample test case
+
+# Load pickle file
 positional_index = load_positional_index("positional_index.pickle")
+
+# take user input and print output
 for i in range(int(input("Enter no of queries: "))):
     temp = "Enter phrase query "+str(i)+" : "
     phrase_query = input(temp)

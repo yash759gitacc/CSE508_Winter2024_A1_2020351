@@ -30,14 +30,12 @@ def create_positional_index(dataset_dir):
 
 
 
-
-
-# Step 4: Save positional index using pickle
+#  Save positional index using pickle
 def save_positional_index(positional_index, output_path):
     with open(output_path, 'wb') as file:
         pickle.dump(positional_index, file)
 
-# Step 5: Load positional index using pickle
+# Load positional index using pickle
 def load_positional_index(input_path):
     with open(input_path, 'rb') as file:
         positional_index = pickle.load(file)
@@ -49,5 +47,3 @@ dataset_dir = "text_files"
 positional_index = create_positional_index(dataset_dir)
 save_positional_index(positional_index, "positional_index.pickle")
 
-# Load positional index
-loaded_positional_index = load_positional_index("positional_index.pickle")
