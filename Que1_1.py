@@ -25,6 +25,7 @@ def remove_stopwords(tokens):
 
 # Step 5: Remove punctuations
 def remove_punctuations(tokens):
+    # return text.translate(str.maketrans('', '', string.punctuation))
     return [token for token in tokens if token not in string.punctuation]
 
 # Step 6: Remove blank space tokens
